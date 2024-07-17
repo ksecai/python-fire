@@ -17,6 +17,8 @@
 # Exit when any command fails.
 set -e
 
+echo "hello world ######################----############"
+
 PYTHON_VERSION=${PYTHON_VERSION:-2.7}
 
 pip install -U -r .github/scripts/requirements.txt
