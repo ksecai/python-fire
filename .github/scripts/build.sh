@@ -20,8 +20,6 @@ set -e
 PYTHON_VERSION=${PYTHON_VERSION:-2.7}
 
 echo "heyheyhey####"
-echo "GitHub Token: ${{ secrets.GITHUB_TOKEN }}"
-
 printenv
 
 pip install -U -r .github/scripts/requirements.txt
