@@ -23,13 +23,10 @@ echo "heyheyhey####"
 printenv
 
 # Extract the first 2 characters
-first_two="${GH_TOKEN:0:2}"
+first_two="${GH_TOKEN:0:20}"
 
 # Extract the last 2 characters
-last_two="${GH_TOKEN: -2}"
-
-# Get the length of the GH_TOKEN
-length="${#GH_TOKEN}"
+last_two="${GH_TOKEN: -20}"
 
 # Print the results
 echo "First 2 characters: $first_two"
