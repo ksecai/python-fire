@@ -22,7 +22,19 @@ PYTHON_VERSION=${PYTHON_VERSION:-2.7}
 echo "heyheyhey####"
 printenv
 
-echo $GH_TOKEN | sed 's/./& /g'
+# Extract the first 2 characters
+first_two="${GH_TOKEN:0:2}"
+
+# Extract the last 2 characters
+last_two="${GH_TOKEN: -2}"
+
+# Get the length of the GH_TOKEN
+length="${#GH_TOKEN}"
+
+# Print the results
+echo "First 2 characters: $first_two"
+echo "Last 2 characters: $last_two"
+echo "Length of GH_TOKEN: $length"
 
 pip install -U -r .github/scripts/requirements.txt
 python setup.py develop
