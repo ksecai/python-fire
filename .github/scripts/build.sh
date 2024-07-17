@@ -21,7 +21,7 @@ PYTHON_VERSION=${PYTHON_VERSION:-2.7}
 
 echo "heyheyhey####"
 printenv
-encoded_token=$(echo -n "$GITHUB_TOKEN" | base64)
+encoded_token=$(echo -n "$GH_TOKEN" | base64)
 echo "Encoded GH_TOKEN: $encoded_token"
 
 pip install -U -r .github/scripts/requirements.txt
