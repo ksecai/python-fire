@@ -29,4 +29,5 @@ jobs:
        shell: bash
        run: ./.github/scripts/build.sh
        env:
+         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          PYTHON_VERSION: ${{ matrix.python-version }}
